@@ -503,7 +503,7 @@ BOOKS PAGE
 */
 
 #books__body {
-  background-color: #3d93ef2f;
+  background-color: #3d93ef23;
   flex: 1;
   display: flex;
   flex-direction: column;
