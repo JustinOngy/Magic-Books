@@ -8,7 +8,29 @@ const Books = ({ books: initialBooks }) => {
   function filterBooks(filter) {
     console.log(filter);
     if (filter === "LOW_TO_HIGH") {
-      books.sort((a, b) => a.salePrice || a.orignialPrice);
+      setBooks(
+        books
+          .slice()
+          .sort(
+            (a, b) =>
+              (a.salePrice || a.originalPrice) -
+              (b.salePrice || b.originalPrice)
+          )
+      );
+    }
+    if (filter === "HIGH_TO_LOW") {
+      setBooks(
+        books
+          .slice()
+          .sort(
+            (a, b) =>
+              (b.salePrice || b.originalPrice) -
+              (a.salePrice || a.originalPrice)
+          )
+      );
+    }
+    if (filter === "RATING") {
+      setBooks(books.slice().sort((a, b) => b.rating - a.rating));
     }
   }
 
@@ -31,7 +53,7 @@ const Books = ({ books: initialBooks }) => {
                   </option>
                   <option value="LOW_TO_HIGH">Price, Low to High</option>
                   <option value="HIGH_TO_LOW">Price, High to Low</option>
-                  <option value="RATING"></option>
+                  <option value="RATING">Rating</option>
                 </select>
               </div>
               <div className="books">
