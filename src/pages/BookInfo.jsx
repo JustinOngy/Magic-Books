@@ -5,20 +5,19 @@ import Rating from "../components/ui/Rating";
 import { Link, useParams } from "react-router-dom";
 import Book from "../components/ui/Book";
 
-const BookInfo = ({ books }) => {
+const BookInfo = ({ books, addToCart }) => {
   const { id } = useParams();
   const book = books.find((book) => +book.id === +id);
 
-  console.log(id);
   return (
     <div id="books__body">
       <main id="books__main">
         <div className="books__container">
           <div className="row">
             <div className="book__seleced--top">
-              <a href="/books" className="book__link">
+              <Link to="/books" className="book__link">
                 <FontAwesomeIcon icon="arrow-left" />
-              </a>
+              </Link>
               <a href="/books" className="book__link">
                 <h2 className="book__selected--title--top">Books</h2>
               </a>
@@ -51,7 +50,9 @@ const BookInfo = ({ books }) => {
                     voluptatibus rerum eius doloribus vitae?
                   </p>
                 </div>
-                <button className="btn">Add to cart</button>
+                <button className="btn" onClick={() => addToCart(book)}>
+                  Add to cart
+                </button>
               </div>
             </div>
           </div>
