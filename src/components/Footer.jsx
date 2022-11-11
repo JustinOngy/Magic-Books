@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 
 const Footer = () => {
@@ -6,24 +7,24 @@ const Footer = () => {
     <footer>
       <div className="container">
         <div className="row row__container">
-          <a href="/">
+          <Link to="/">
             <figure className="footer__logo">
               <img src={Logo} className="footer__logo--img" alt="" />
             </figure>
-          </a>
+          </Link>
           <div className="footer__list">
-            <a href="/" className="footer__link">
+            <Link to="/" className="footer__link">
               Home
-            </a>
-            <a href="/" className="footer__link no-cursor">
+            </Link>
+            <Link to="/" className="footer__link no-cursor">
               About
-            </a>
-            <a href="/books" className="footer__link">
+            </Link>
+            <Link to="/books" className="footer__link">
               Books
-            </a>
-            <a href="/cart" className="footer__link">
+            </Link>
+            <Link to="/cart" className="footer__link">
               Cart
-            </a>
+            </Link>
           </div>
           <div className="footer__copyright">
             Copyright &copy; 2022 Magic Books
