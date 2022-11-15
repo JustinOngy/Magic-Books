@@ -16,7 +16,7 @@ const Landing = () => {
               Find the book that's just right for
               <span className="blue"> you!</span>{" "}
             </h2>
-            <Link to="#features">
+            <Link to="/books">
               <button className="btn">Browse books</button>
             </Link>
           </div>
