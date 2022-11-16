@@ -23,7 +23,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
       <main id="books__main">
         <div className="books__container">
           <div className="row">
-            <div className="book__seleced--top">
+            <div className="book__selected--top">
               <Link to="/books" className="book__link">
                 <FontAwesomeIcon icon="arrow-left" />
               </Link>

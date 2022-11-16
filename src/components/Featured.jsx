@@ -4,11 +4,12 @@ import { books } from "../data";
 
 const Featured = () => {
   return (
-    <section id="featured">
+    <section id="features">
       <div className="container">
         <div className="row">
           <h2 className="section__title">
-            Featured <span className="blue">Books</span>
+            <span className="orange">Featured </span>
+            <span className="white">Books.</span>
           </h2>
           <div className="books">
             {books
