@@ -1,15 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import UndrawBooks from "../assets/undraw_reading.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const Landing = () => {
   return (
     <section id="landing">
       <header>
+        <div class="bg-image"></div>
         <div className="header__container">
           <div className="header__description">
-            <h1 className="header__landing--title">
-              The most
+            <h1
+              className="header__landing--title"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="500">
+              Welcome to
               <span className="magic">
                 <span className="magic-star">
                   <svg viewBox="0 0 512 512">
@@ -17,21 +24,29 @@ const Landing = () => {
                   </svg>
                 </span>
 
-                <span className="magic-text">magical</span>
+                <span className="magic-text">Magic Books!</span>
               </span>
-              online user-friendly library platform
             </h1>
-            <h2 className="header__landing--title">
-              Find the book that's just right for
-              <span className="orange"> you!</span>{" "}
+            <h2
+              className="header__landing--subtitle"
+              data-aos="fade-up"
+              data-aos-delay="750"
+              data-aos-duration="750"
+              data-aos-once="true">
+              the enchanting online library platform where you can dive into a
+              world of endless knowledge and imagination
+              <span className="orange"> you!</span>
             </h2>
-            <Link to="/books">
+            <Link
+              to="/books"
+              data-aos="fade-up"
+              data-aos-delay="1000"
+              data-aos-duration="1000"
+              data-aos-once="true">
               <button className="btn">Browse books</button>
             </Link>
           </div>
-          <figure className="header__img--wrapper">
-            <img className="landing__image" src={UndrawBooks} alt="" />
-          </figure>
+
           <ul className="circles">
             <li></li>
             <li></li>

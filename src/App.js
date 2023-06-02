@@ -40,9 +40,7 @@ function App() {
     return counter;
   }
 
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
+  useEffect(() => {}, [cart]);
 
   // ADDING MULTIPLE QUANTITIES OF A BOOK TO CART
 

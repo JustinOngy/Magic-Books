@@ -1,6 +1,9 @@
 import React from "react";
 import Book from "./ui/Book";
 import { books } from "../data";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const Featured = () => {
   return (
@@ -8,10 +11,28 @@ const Featured = () => {
       <div className="container">
         <div className="row">
           <h2 className="section__title">
-            <span className="orange">Featured </span>
-            <span className="white">Books.</span>
+            <span
+              className="blue"
+              data-aos="fade"
+              data-aos-delay="500"
+              data-aos-once="true">
+              Featured
+            </span>
+            <span
+              className="black"
+              data-aos="fade"
+              data-aos-delay="750"
+              data-aos-once="true">
+              {" "}
+              Books.
+            </span>
           </h2>
-          <div className="books">
+          <div
+            className="books"
+            data-aos="fade-left"
+            data-aos-delay="950"
+            data-aos-duration="500"
+            data-aos-once="true">
             {books
               .filter((book) => book.rating === 5)
               .slice(0, 4)

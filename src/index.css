@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .App {
@@ -77,7 +77,7 @@ button:active {
 }
 
 .btn {
-  background-color: #5c1bcd;
+  background-color: #c187de;
   color: white;
   padding: 12px 24px;
   font-size: 20px;
@@ -103,9 +103,9 @@ button:active {
 
 /* Magic text */
 :root {
-  --blue1: rgb(252, 226, 54);
-  --blue2: rgb(169, 133, 255);
-  --blue3: rgb(255, 227, 142);
+  --blue1: rgb(87, 188, 255);
+  --blue2: rgb(146, 100, 255);
+  --blue3: rgb(255, 231, 159);
 }
 
 @keyframes background-pan {
@@ -329,21 +329,30 @@ LANDING
 #landing,
 #features,
 #explore {
-  background-color: #5971b7;
+  background-color: #d6d6d6;
 }
 
 .header__landing--title {
-  color: white;
+  color: #ffffff;
+}
+
+.header__landing--subtitle {
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 24px;
 }
 
 .circles {
   position: absolute;
-  top: 500px;
   left: 0;
   width: 100%;
-  height: 70%;
+  height: 90%;
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
 }
 
 .circles li {
@@ -352,15 +361,15 @@ LANDING
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(255, 255, 255);
   animation: animate 25s linear infinite;
   bottom: -150px;
 }
 
 .circles li:nth-child(1) {
   left: 25%;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 90px;
   animation-delay: 0s;
 }
 
@@ -403,8 +412,8 @@ LANDING
 
 .circles li:nth-child(7) {
   left: 35%;
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
   animation-delay: 7s;
 }
 
@@ -426,8 +435,8 @@ LANDING
 
 .circles li:nth-child(10) {
   left: 85%;
-  width: 150px;
-  height: 150px;
+  width: 105px;
+  height: 105px;
   animation-delay: 0s;
   animation-duration: 11s;
 }
@@ -452,19 +461,37 @@ header {
 
 .header__container {
   width: 100%;
-  max-width: 720px;
+  /* max-width: 720px; */
   margin: 0 auto;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: space-around;
+  z-index: 100;
+}
+
+.bg-image {
+  background-image: url(https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2834&q=80);
+  background-size: cover; /* or "contain" depending on what you want */
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
 }
 
 .header__description {
   display: flex;
+  max-width: 720px;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   padding-top: 100px;
+  height: auto;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 3;
 }
 
 .header__img--wrapper {
@@ -503,6 +530,7 @@ header {
 .no-cursor {
   cursor: not-allowed;
 }
+
 /* 
 
 HIGHLIGHTS 
@@ -522,7 +550,7 @@ HIGHLIGHTS
   width: 101vw;
   height: 12vw;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -548,6 +576,10 @@ HIGHLIGHTS
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.highlight__img:hover {
+  color: #0080ff;
 }
 
 .highlight__para {
@@ -598,6 +630,7 @@ FEATURES
 
 .book:hover {
   transform: translateY(-4px);
+  opacity: 0.5;
 }
 
 .book__img {
