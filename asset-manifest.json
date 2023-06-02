@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Magic-Books/static/css/main.f35facad.css",
+    "main.js": "/Magic-Books/static/js/main.01783d7c.js",
+    "static/js/787.f479c476.chunk.js": "/Magic-Books/static/js/787.f479c476.chunk.js",
+    "static/media/empty_cart.png": "/Magic-Books/static/media/empty_cart.339986f170a5b77f0c59.png",
+    "index.html": "/Magic-Books/index.html",
+    "static/media/wave.svg": "/Magic-Books/static/media/wave.42edd5970e3619090a0f.svg",
+    "main.f35facad.css.map": "/Magic-Books/static/css/main.f35facad.css.map",
+    "main.01783d7c.js.map": "/Magic-Books/static/js/main.01783d7c.js.map",
+    "787.f479c476.chunk.js.map": "/Magic-Books/static/js/787.f479c476.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f35facad.css",
+    "static/js/main.01783d7c.js"
+  ]
+}
