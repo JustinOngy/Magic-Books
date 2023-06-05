@@ -15,17 +15,17 @@ const Nav = ({ numberOfItems }) => {
   return (
     <nav>
       <div className="nav__container">
-        <Link to="/">
+        <Link to="/Magic-Books/">
           <img src={MagicBooksLogo} alt="" className="logo" />
         </Link>
         <ul className="nav__links">
           <li className="nav__list">
-            <Link to="/" className="nav__link">
+            <Link to="/Magic-Books/" className="nav__link">
               Home
             </Link>
           </li>
           <li className="nav__list">
-            <Link to="/books" className="nav__link">
+            <Link to="/Magic-Books/books" className="nav__link">
               Books
             </Link>
           </li>
@@ -33,7 +33,7 @@ const Nav = ({ numberOfItems }) => {
             <FontAwesomeIcon icon="bars" />
           </button>
           <li className="nav__icon">
-            <Link to="/cart" className="nav__link">
+            <Link to="/Magic-Books/cart" className="nav__link">
               <FontAwesomeIcon icon="shopping-cart" />
             </Link>
             {numberOfItems > 0 && (

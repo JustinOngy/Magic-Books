@@ -38,7 +38,7 @@ const Landing = () => {
               <span className="orange"> you!</span>
             </h2>
             <Link
-              to="/books"
+              to="/Magic-Books/books"
               data-aos="fade-up"
               data-aos-delay="1000"
               data-aos-duration="1000"
