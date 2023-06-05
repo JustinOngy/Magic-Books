@@ -10,7 +10,7 @@ const Explore = () => {
             <span className="blue">Explore More</span>{" "}
             <span className="blakc">Books!</span>
           </h2>
-          <Link to="/Magic-Books/books/">
+          <Link to="/books/">
             <button className="btn">Explore books</button>
           </Link>
         </div>

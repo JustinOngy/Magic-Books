@@ -73,16 +73,16 @@ function App() {
       <div className="App">
         <Nav numberOfItems={numberOfItems()} />
         <Routes>
-          <Route path="/Magic-Books/" element={<Home />} />
-          <Route path="/Magic-Books/books" element={<Books books={books} />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/books" element={<Books books={books} />} />
           <Route
-            path="/Magic-Books/books/:id"
+            path="/books/:id"
             element={
               <BookInfo books={books} addToCart={addToCart} cart={cart} />
             }
           />
           <Route
-            path="/Magic-Books/cart"
+            path="/cart"
             element={
               <Cart
                 books={books}
